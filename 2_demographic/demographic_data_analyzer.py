@@ -3,7 +3,7 @@ import pandas as pd
 
 def calculate_demographic_data(print_data=True):
     # Read data from file
-    df = pd.read_csv('data2/adult.data.csv')
+    df = pd.read_csv('2_demographic/adult.data.csv')
 
     # How many of each race are represented in this dataset? This should be a Pandas series with race names as the index labels.
     race_count = df['race'].value_counts()
@@ -45,7 +45,6 @@ def calculate_demographic_data(print_data=True):
     top_IN_occupation =  (df[df['native_country'] == 'India' & ['capital-gain'] == '>50 k']).value_counts()
 
     # DO NOT MODIFY BELOW THIS LINE
-
     if print_data:
         print("Number of each race:\n", race_count) 
         print("Average age of men:", average_age_men)
